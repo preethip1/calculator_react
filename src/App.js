@@ -5,10 +5,7 @@ import './styles/output.css'
 
 function App() {
   return (
-    <div>
-
       <Calculator/>
-    </div>
   );
 }
 
