@@ -2,36 +2,32 @@ import React, { Component } from 'react';
 import Button from './button';
 
 class Block extends Component {
-    onNumberClick(number) {
-       console.log("clicked" , number)
-    }
-
     render() { 
         return <div>
                 <div className = "h-auto w-auto flex flex-col bg-gray-200">
-                    <div className="flex flex-row justify-center items-center">
-                        <Button onClick={this.onNumberClick("7")} btntxt='7'/>
-                        <Button onClick={this.onNumberClick("8")} btntxt='8'/>
-                        <Button onClick={this.onNumberClick("9")} btntxt='9'/>
-                        <Button onClick={this.onNumberClick("/")} btntxt='/'/> 
+                    <div className="flex flex-row justify-around items-center">
+                        <div onClick={() => this.props.numberClick('7')} className="h-auto w-16"><Button btntxt='7'/> </div>
+                        <div onClick={() => this.props.numberClick('8')} className="h-auto w-16" ><Button btntxt='8'/> </div>
+                        <div onClick={() => this.props.numberClick('9')} className="h-auto w-16"><Button btntxt='9'/> </div>
+                        <div onClick={() => this.props.numberClick('/')} className="h-auto w-16"><Button btntxt='/'/> </div>
                     </div>
-                    <div className="flex flex-row justify-center items-center">
-                        <Button onClick={this.onNumberClick("4")} btntxt='4'/>
-                        <Button onClick={this.onNumberClick("5")} btntxt='5'/>
-                        <Button onClick={this.onNumberClick("6")} btntxt='6'/>
-                        <Button onClick={this.onNumberClick("-")} btntxt='-'/>
+                    <div className="flex flex-row justify-around items-center">
+                        <div onClick={() => this.props.numberClick('4')} className="h-auto w-16"><Button btntxt='4'/> </div>
+                        <div onClick={() => this.props.numberClick('5')} className="h-auto w-16" ><Button btntxt='5'/> </div>
+                        <div onClick={() => this.props.numberClick('6')} className="h-auto w-16"><Button btntxt='6'/> </div>
+                        <div onClick={() => this.props.numberClick('-')} className="h-auto w-16"><Button btntxt='-'/> </div>
                     </div>
-                    <div className="flex flex-row justify-center items-center">
-                        <Button onClick={this.onNumberClick("1")} btntxt='1'/>
-                        <Button onClick={this.onNumberClick("2")} btntxt='2'/>
-                        <Button onClick={this.onNumberClick("3")} btntxt='3'/>
-                        <Button onClick={this.onNumberClick("+")} btntxt='+'/>
+                    <div className="flex flex-row justify-around items-center">
+                        <div onClick={() => this.props.numberClick('1')} className="h-auto w-16"><Button btntxt='1'/> </div>
+                        <div onClick={() => this.props.numberClick('2')} className="h-auto w-16" ><Button btntxt='2'/> </div>
+                        <div onClick={() => this.props.numberClick('3')} className="h-auto w-16"><Button btntxt='3'/> </div>
+                        <div onClick={() => this.props.numberClick('+')} className="h-auto w-16"><Button btntxt='+'/> </div>
                     </div>
-                    <div className="flex flex-row justify-center items-center">
-                        <Button onClick={this.onNumberClick("0")} btntxt='0'/>
-                        <Button onClick={this.onNumberClick(".")} btntxt='.'/>
-                        <Button onClick={this.onNumberClick("=")} btntxt='='/>
-                        <Button onClick={this.onNumberClick("x")} btntxt='x'/>
+                    <div className="flex flex-row justify-around items-center">
+                        <div onClick={() => this.props.numberClick('0')} className="h-auto w-16"><Button btntxt='0'/> </div>
+                        <div onClick={() => this.props.numberClick('.')} className="h-auto w-16" ><Button btntxt='.'/> </div>
+                        <div onClick={() => this.props.numberClick('=')} className="h-auto w-16"><Button btntxt='='/> </div>
+                        <div onClick={() => this.props.numberClick('x')} className="h-auto w-16"><Button btntxt='x'/> </div>
                     </div>
                 </div>
               </div>
